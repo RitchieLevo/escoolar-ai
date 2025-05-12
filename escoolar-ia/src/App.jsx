@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import WelcomeScreen from "./components/WelcomeScreen.jsx";
 import LoginScreen from "./components/LoginScreen";
+import ProfileSelectionScreen from "./components/ProfileSelectionScreen";
 import './App.css'
 
 function App() {
@@ -9,10 +10,11 @@ function App() {
       <Routes>
         <Route path="/" element={<WelcomeScreen />} />
         <Route path="/login" element={<LoginScreen />} />
+        <Route path="/select-profile" element={<ProfileSelectionScreen />} />
         {/* Agrega más rutas aquí */}
       </Routes>
     </BrowserRouter>
   );
 }
 
-export default App
+export default App;

@@ -1,7 +1,17 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import escoolarLogo from "../assets/escoolar-03.svg";
 
 const LoginScreen = () => {
+  const navigate = useNavigate();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Aquí podrías agregar lógica de autenticación real
+    // Por ahora, simplemente navega a la pantalla de selección de perfil
+    navigate("/select-profile");
+  };
+
   return (
     <div className="d-flex flex-column justify-content-center align-items-center vh-100">
       <img
@@ -17,7 +27,7 @@ const LoginScreen = () => {
       <p className="mb-4 text-center" style={{ maxWidth: 350 }}>
         Accede a tu cuenta y deja que nuestros <strong>maestros virtuales con IA</strong> te acompañen en tu aprendizaje. ¡Relájate y aprende a tu ritmo, carnal!
       </p>
-      <form className="w-100" style={{ maxWidth: 350 }}>
+      <form className="w-100" style={{ maxWidth: 350 }} onSubmit={handleSubmit}>
         <div className="mb-3 text-start">
           <label htmlFor="login-username" className="form-label">
             Usuario o correo electrónico
