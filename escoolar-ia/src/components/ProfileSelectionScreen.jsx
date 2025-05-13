@@ -1,6 +1,6 @@
 
 import React from "react";
-
+import { useNavigate } from "react-router-dom";
 
 const profiles = [
   {
@@ -24,6 +24,16 @@ const profiles = [
 ];
 
 const ProfileSelectionScreen = ({ onSelect }) => {
+  const navigate = useNavigate();
+
+  const handleSelect = (profileKey) => {
+    if (onSelect) {
+      onSelect(profileKey);
+    }
+    // Navega al home (ajusta la ruta si es diferente)
+    navigate("/home");
+  };
+
   return (
     <div className="d-flex flex-column justify-content-center align-items-center vh-100">
       <h2 className="mb-4 text-info">Selecciona tu perfil</h2>
@@ -33,7 +43,7 @@ const ProfileSelectionScreen = ({ onSelect }) => {
             key={profile.key}
             className="btn btn-outline-info btn-lg d-flex flex-column align-items-center p-3"
             style={{ minWidth: 200, fontSize: 20 }}
-            onClick={() => onSelect && onSelect(profile.key)}
+            onClick={() => handleSelect(profile.key)}
           >
             <img
               src={profile.photo}

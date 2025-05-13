@@ -4,6 +4,7 @@ import LoginScreen from "./components/LoginScreen";
 import ProfileSelectionScreen from "./components/ProfileSelectionScreen";
 import AnimatedCircuitBackground from "./components/AnimatedCircuitBackground";
 import './App.css'
+import HomeScreen from "./components/HomeScreen";
 
 function App() {
   return (
@@ -16,7 +17,10 @@ function App() {
             <Route path="/login" element={<LoginScreen />} />
             <Route path="/select-profile" element={<ProfileSelectionScreen />} />
             {/* Agrega más rutas aquí */}
+            <Route path="/home" element={<HomeScreen />} />
+            
           </Routes>
+
         </BrowserRouter>
       </div>
     </div>
