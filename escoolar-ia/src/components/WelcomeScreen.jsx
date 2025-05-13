@@ -10,7 +10,7 @@ const WelcomeScreen = () => {
         alt="Escoolar Logo"
         style={{ width: 180, marginBottom: 24 }}
       />
-      <h1 className="mb-3 text-primary">¡Bienvenido a Escoolar IA!</h1>
+      <h1 className="mb-3 text-info">¡Bienvenido a Escoolar IA!</h1>
       <p className="mb-4 text-center" style={{ maxWidth: 420 }}>
         Tu plataforma educativa ahora con <strong>inteligencia artificial</strong>. <strong>Maestros virtuales</strong> que te guiarán en cada sección, respondiendo tus dudas y enseñando temas chidos de manera personalizada. 
         <br /><br />

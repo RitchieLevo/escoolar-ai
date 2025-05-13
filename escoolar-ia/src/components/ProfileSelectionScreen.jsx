@@ -12,13 +12,13 @@ const profiles = [
   {
     key: "teacher",
     name: "María López",
-    age: 34,
+    age: 14,
     photo: "https://randomuser.me/api/portraits/lego/4.jpg",
   },
   {
     key: "admin",
     name: "Carlos Ramírez",
-    age: 29,
+    age: 7,
     photo: "https://randomuser.me/api/portraits/lego/1.jpg",
   },
 ];
@@ -48,7 +48,7 @@ const ProfileSelectionScreen = ({ onSelect }) => {
               }}
             />
             <span className="fw-bold">{profile.name}</span>
-            <span className="text-secondary" style={{ fontSize: 16 }}>
+            <span className="text-light" style={{ fontSize: 16 }}>
               Edad: {profile.age}
             </span>
           </button>
